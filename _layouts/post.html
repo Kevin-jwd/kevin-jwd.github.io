@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="hero">
-  <p class="eyebrow">{{ page.categories.first | escape }} · PROJECT DOCUMENTATION</p>
+  <p class="eyebrow">PROJECT {{ page.project_number | prepend: '0' }} · {{ page.categories.first | escape }}</p>
   <h1>{{ page.title | escape }}</h1>
   <p class="lead">{{ page.description | escape }}</p>
   <dl class="meta">

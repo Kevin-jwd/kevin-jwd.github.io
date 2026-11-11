@@ -3,5 +3,5 @@ layout: default
 ---
 <div class="hero"><p class="eyebrow">ALL PROJECTS</p><h1>프로젝트 목록</h1></div>
 {% for slug in site.data.project_order %}{% assign project = site.posts | where: 'slug', slug | first %}
-<a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ forloop.index | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p></div><span class="arrow">→</span></a>
+<a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ project.project_number | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p></div><span class="arrow">→</span></a>
 {% endfor %}

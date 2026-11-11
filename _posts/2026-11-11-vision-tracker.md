@@ -7,9 +7,10 @@ tags: ["Python", "OpenCV", "UART", "TensorRT"]
 permalink: "/projects/vision-tracker.html"
 toc: true
 comments: false
-period: "—"
-people: "—"
+period: "2026.09.02 ~ 2026.09.16"
+people: "4명 (본인 포함)"
 project_type: "팀 프로젝트"
+project_number: 3
 ---
 
 ## 프로젝트 개요

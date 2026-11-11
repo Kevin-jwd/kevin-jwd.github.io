@@ -6,6 +6,6 @@ layout: default
 {% assign groups = site.tags | sort %}
 {% for group in groups %}
 <h2 id="{{ group[0] | slugify: 'pretty' }}">{{ group[0] | escape }}</h2>
-{% for project in group[1] %}<a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ forloop.index | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p></div><span class="arrow">→</span></a>{% endfor %}
+{% assign projects = group[1] | sort: 'project_number' %}{% for project in projects %}<a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ project.project_number | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p></div><span class="arrow">→</span></a>{% endfor %}
 {% endfor %}
 </div>

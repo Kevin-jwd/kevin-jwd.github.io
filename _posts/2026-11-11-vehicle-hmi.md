@@ -7,9 +7,10 @@ tags: ["C++", "Qt", "OpenCV", "SQLite"]
 permalink: "/projects/vehicle-hmi.html"
 toc: true
 comments: false
-period: "—"
-people: "—"
+period: "2026.08.14 ~ 2026.08.19"
+people: "4명 (본인 포함)"
 project_type: "팀 프로젝트"
+project_number: 4
 ---
 
 ## 프로젝트 개요

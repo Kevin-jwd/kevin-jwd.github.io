@@ -10,7 +10,7 @@ layout: default
 <section id="projects"><h2>프로젝트 문서</h2>
   <div class="section-heading"><p>프로젝트를 선택하면 상세 문서로 이동합니다.</p><small>{{ site.posts.size }} PROJECTS</small></div>
   {% for slug in site.data.project_order %}{% assign project = site.posts | where: 'slug', slug | first %}{% if project %}
-  <a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ forloop.index | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p><div class="project-details"><span>{{ project.categories.first | escape }}</span><span>{{ project.tags | slice: 0, 4 | join: ' · ' | escape }}</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
+  <a class="project-row" href="{{ project.url | relative_url }}"><span class="project-num">{{ project.project_number | prepend: '0' }}</span><div><div class="project-title">{{ project.title | escape }}</div><p class="project-summary">{{ project.description | escape }}</p><div class="project-details"><span>{{ project.period | escape }}</span><span>{{ project.people | escape }}</span><span>{{ project.categories.first | escape }}</span><span>{{ project.tags | slice: 0, 4 | join: ' · ' | escape }}</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
   {% endif %}{% endfor %}
 </section>
 <section id="reading"><h2>문서 구성</h2><p>개요와 담당 역할을 먼저 확인하고, 핵심 구현·핀맵·문제 해결과 시연 자료를 이어서 볼 수 있습니다.</p><div class="reading-cards"><div><strong>설계와 구현</strong><p>개요 · 담당 역할 · 시스템 구조<br>핵심 기능 · 통신과 핀맵</p></div><div><strong>문제 해결과 검증</strong><p>트러블슈팅 · 실제 동작<br>소스 코드 · 발표·참고 자료</p></div></div></section>

@@ -1,9 +1,9 @@
 [
-  "smart-fan",
-  "vehicle-hmi",
-  "vision-tracker",
   "i2c-rtl",
-  "rc-car",
+  "smart-fan",
+  "vision-tracker",
+  "vehicle-hmi",
   "lcd-rtc",
+  "rc-car",
   "imu-pt"
 ]

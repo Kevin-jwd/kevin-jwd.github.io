@@ -33,7 +33,7 @@
       {% for slug in site.data.project_order %}
         {% assign project = site.posts | where: 'slug', slug | first %}
         {% if project %}
-        <a class="nav-link {% if page.url == project.url %}active{% endif %}" {% if page.url == project.url %}aria-current="page"{% endif %} href="{{ project.url | relative_url }}"><span class="nav-code">{{ forloop.index | prepend: '0' }}</span>{{ project.title | escape }}</a>
+        <a class="nav-link {% if page.url == project.url %}active{% endif %}" {% if page.url == project.url %}aria-current="page"{% endif %} href="{{ project.url | relative_url }}"><span class="nav-code">{{ project.project_number | prepend: '0' }}</span>{{ project.title | escape }}</a>
         {% endif %}
       {% endfor %}
       <p class="nav-heading">EXPLORE</p>
