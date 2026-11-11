@@ -1,11 +1,82 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>도재우 포트폴리오</title>
-</head>
-<body>
-  <h1>도재우 | Embedded Software Developer</h1>
-  <p>센서 데이터에서 실제 동작까지 연결하는 개발자</p>
-</body>
-</html>
+본문으로 바로가기
+☰JWJAEWOO DO Engineering Notes
+⌕   문서 검색Ctrl KGitHub ↗☾
+GETTING STARTED
+
+⌂소개 · 프로젝트 모음
+PROJECT DOCUMENTS
+
+01스마트 선풍기 드라이버02차량 HMI03인물 추적 팬틸트04I2C 센서 RTL05자율주행 RC Car06LCD·RTC 드라이버07IMU 모션 트래킹 PT
+도재우 · Jae Woo DoEmbedded Software Developer
+herobine159@naver.com ↗
+Portfolio/소개 · 프로젝트 모음
+EMBEDDED SOFTWARE · PROJECT DOCUMENTATION
+
+센서에서 동작까지,
+구현의 과정을 기록합니다.
+안녕하세요, 임베디드 SW 개발자 도재우입니다.
+MCU 제어, Linux 드라이버, Qt HMI와 RTL 설계 프로젝트의
+담당 역할과 구현 과정, 문제 해결을 정리했습니다.
+
+도재우 · Jae Woo Do전자공학 전공
+프로젝트 문서
+프로젝트를 선택하면 상세 문서로 이동합니다.
+
+01 — 07
+01
+스마트 선풍기 센서·LCD 드라이버
+Jetson에서 BMP180 온도를 읽고 LCD를 제어하는 Linux 커널 드라이버를 구현했습니다.
+
+Linux DriverC · Linux Kernel · I2C
+↗02
+운전자 인증 기반 차량 HMI
+얼굴 인증, 차량 제어, 센서 모니터링과 이력 관리를 Qt HMI로 연결했습니다.
+
+Qt / HMIC++17 · Qt Widgets · QSerialPort
+↗03
+인물 추적 팬틸트 카메라
+인물 검출·추적·재식별 결과를 팬틸트 제어로 연결한 Jetson 시스템입니다.
+
+Embedded VisionPython · YOLO11 · BoT-SORT
+↗04
+I2C 센서 수집·표시 RTL 설계
+두 FPGA 사이의 I2C 통신과 센서 수집·FND·OLED 표시를 RTL로 구현했습니다.
+
+FPGA / RTLVerilog · Vivado · Basys 3 × 2
+↗05
+ATmega128A 자율주행 RC Car
+초음파 거리 측정과 장애물 대응 주행, Bluetooth 수동 제어를 연결했습니다.
+
+MCU / FirmwareC · ATmega128A · Timer
+↗06
+ATmega128A LCD·RTC 드라이버
+GPIO 4비트 LCD 제어와 I2C RTC 시간 읽기·표시를 구현했습니다.
+
+MCU / InterfaceC · ATmega128A · GPIO
+↗07
+모션 트래킹 기반 가정용 PT 시스템
+무릎 위아래에 부착한 IMU 4개의 움직임을 수집해 Unity 모델과 연동했습니다.
+
+Sensor / Motion TrackingESP32 · LSM9DS1 × 4 · I2C MUX
+↗
+문서 구성
+전체 시스템의 목적부터 본인 담당 범위, 구현과 검증까지 순서대로 읽을 수 있도록 구성했습니다.
+
+설계와 구현	문제 해결과 검증
+개요 · 담당 역할 · 시스템 구조	트러블슈팅 · 검증·시연
+주요 기능 · 핀맵·통신 규격	소스 코드 · 발표·참고 자료
+개발 경험
+분야	주요 경험
+MCU / Firmware	타이머·인터럽트·UART·PWM을 이용한 센서·모터 제어
+Linux Driver	Jetson 환경의 I2C 센서·LCD 커널 드라이버
+HMI / Vision	Qt 차량 HMI, 얼굴 인증, 인물 추적과 팬틸트 제어
+FPGA / RTL	Verilog 기반 센서 수집과 I2C 통신·표시 설계
+연락처
+herobine159@naver.com ↗
+GitHub · Kevin-jwd ↗
+© 도재우 · Embedded Software설계하고, 구현하고, 기록합니다.
+ON THIS PAGE
+
+프로젝트 문서문서 구성개발 경험연락처
+프로젝트의 역할과 구조,
+구현 과정을 기록합니다.
