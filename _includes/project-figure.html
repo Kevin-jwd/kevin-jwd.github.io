@@ -1,0 +1,7 @@
+{% assign project_figure = site.static_files | where: 'path', include.path | first %}
+{% if project_figure %}
+
+![{{ include.alt }}]({{ include.path | relative_url }}){: width="{{ include.width }}" height="{{ include.height }}" }
+_{{ include.caption }}_
+
+{% endif %}
