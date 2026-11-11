@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@font-face{font-family:'BM Hanna Air';src:url('./fonts/BMHANNAAir.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 :root{--bg:#fff;--panel:#f7f9fa;--ink:#202a34;--muted:#71808c;--line:#e7ecef;--accent:#137f73;--soft:#eaf6f2;--header:rgba(255,255,255,.94);font-family:Manrope,'Noto Sans KR',sans-serif;color:var(--ink);background:var(--bg);font-synthesis:none}
 :root[data-theme=dark]{--bg:#151c22;--panel:#1b242c;--ink:#e1e9ed;--muted:#9baab6;--line:#2d3942;--accent:#67d7bb;--soft:#203b36;--header:rgba(21,28,34,.95)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;font-size:14px;line-height:1.9}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}a,button,input{outline-offset:5px}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent)}.skip{position:fixed;left:20px;top:-80px;z-index:50;background:var(--bg);padding:10px}.skip:focus{top:5px}

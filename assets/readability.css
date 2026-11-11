@@ -1,7 +1,12 @@
 /* Document hierarchy shared by every project. */
 :root{--muted:#596b78}
 :root[data-theme=dark]{--muted:#b0bec8}
-body{font-size:15px}
+:root{font-family:'BM Hanna Air','Noto Sans KR',sans-serif;font-synthesis:weight}
+body{font-size:16px}
+.sidebar .nav-link{font-size:14px}
+.toc a{font-size:13px}
+.meta dd{font-size:14px}
+.tag{font-size:12px}
 .hero h1{font-size:36px;letter-spacing:-1.2px}
 .hero .lead{font-size:16px;max-width:100%}
 .doc-section{margin:44px 0 0;padding-top:24px;border-top:1px solid var(--line);scroll-margin-top:96px}
@@ -38,4 +43,8 @@ body{font-size:15px}
 .image-dialog img{display:block;max-width:100%;height:auto;background:#fff;margin:auto}
 .image-dialog button{display:block;margin:0 0 12px auto;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:6px 12px}
 .image-dialog p{font-size:12px;text-align:center;color:var(--muted);margin:12px 0 0}
+.doc-body .output-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+.doc-body .output-gallery img{max-height:320px;object-fit:contain;background:#111}
+.doc-body .output-gallery figcaption strong{display:block;margin-bottom:5px}
+@media(max-width:760px){.doc-body .output-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.meta dd{font-size:13px}}
 @media(max-width:760px){.hero h1{font-size:30px}.hero .lead{font-size:14px}.doc-section>h2{font-size:22px}.doc-body h3{font-size:17px}.meta{grid-template-columns:1fr}.meta>div{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:80px 1fr;gap:12px}.meta dt{margin:0}.meta dd{font-size:12px}.reading-cards{grid-template-columns:1fr}.doc-body .row{gap:10px}.doc-body figcaption{font-size:11px;padding:9px}.project-title{font-size:15px}}
