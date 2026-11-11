@@ -3,7 +3,7 @@
 ## Bluetooth UART 파형 추가
 
 이미지는 원본 그대로 복사하고, 본문에서 F·S / L·R의 2×2 격자로 표시합니다.
-Chirpy에 포함된 Bootstrap의 `row`·`col-6` 구성을 사용하며 테마 CSS는 변경하지 않습니다.
+본문의 `row`·`col-6` 구성에 `assets/readability.css`의 CSS Grid를 적용해 2×2로 표시합니다. Bootstrap이나 Chirpy 테마에 의존하지 않습니다.
 
 | 원본 파일 | 사이트 파일 | 수신 문자 | 위치 |
 | --- | --- | --- | --- |

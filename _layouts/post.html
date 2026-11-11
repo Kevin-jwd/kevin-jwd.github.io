@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="hero">
+  <p class="eyebrow">{{ page.categories.first | escape }} · PROJECT DOCUMENTATION</p>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="lead">{{ page.description | escape }}</p>
+  <dl class="meta">
+    <div><dt>기간</dt><dd>{{ page.period | default: '—' | escape }}</dd></div>
+    <div><dt>참여 인원</dt><dd>{{ page.people | default: '—' | escape }}</dd></div>
+    <div><dt>구분</dt><dd>{{ page.project_type | default: '—' | escape }}</dd></div>
+  </dl>
+  <div class="tags">{% for tag in page.tags %}<a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify: 'pretty' | uri_escape }}">{{ tag | escape }}</a>{% endfor %}</div>
+</div>
+<div class="doc-body">{{ content }}</div>
+<div class="next-pages"><a href="{{ '/' | relative_url }}"><small>전체 프로젝트</small>← 프로젝트 모음</a><a href="#main"><small>페이지 처음으로</small>맨 위로 ↑</a></div>

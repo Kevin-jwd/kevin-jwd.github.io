@@ -7,13 +7,10 @@ tags: ["Python", "OpenCV", "UART", "TensorRT"]
 permalink: "/projects/vision-tracker.html"
 toc: true
 comments: false
+period: "—"
+people: "—"
+project_type: "팀 프로젝트"
 ---
-
-인물 검출·추적·재식별 결과를 팬틸트 제어로 연결한 Jetson 시스템입니다.
-
-| 기간 | 참여 인원 | 구분 |
-| --- | --- | --- |
-| — | — | 팀 프로젝트 |
 
 ## 프로젝트 개요
 

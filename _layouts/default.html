@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="theme-color" content="#137f73">
+  <title>{{ page.title | default: '프로젝트 모음' | escape }} | 도재우</title>
+  <script>try{const t=localStorage.getItem('portfolio-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch{}</script>
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/readability.css' | relative_url }}">
+  <script defer src="{{ '/assets/app.js' | relative_url }}"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로가기</a>
+  <header class="topbar">
+    <button class="icon-button menu-button" id="menu-toggle" aria-label="프로젝트 메뉴 열기" aria-controls="project-nav" aria-expanded="false">☰</button>
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="mark">JW</span>JAEWOO DO <small>Engineering Notes</small></a>
+    <div class="header-right">
+      <button class="search-open" id="search-open"><span>⌕ &nbsp; 문서 검색</span><span class="key">Ctrl K</span></button>
+      <a href="https://github.com/Kevin-jwd">GitHub ↗</a>
+      <button class="icon-button" id="theme-toggle" aria-label="어두운 테마로 전환">☾</button>
+    </div>
+  </header>
+  <div class="overlay"></div>
+  <div class="shell">
+    <nav class="sidebar" id="project-nav" aria-label="프로젝트 문서">
+      <p class="nav-heading">PORTFOLIO</p>
+      <a class="nav-link {% if page.layout == 'home' %}active{% endif %}" href="{{ '/' | relative_url }}"><span class="nav-code">⌂</span>소개 · 프로젝트 모음</a>
+      <p class="nav-heading">PROJECT DOCUMENTS</p>
+      {% for slug in site.data.project_order %}
+        {% assign project = site.posts | where: 'slug', slug | first %}
+        {% if project %}
+        <a class="nav-link {% if page.url == project.url %}active{% endif %}" {% if page.url == project.url %}aria-current="page"{% endif %} href="{{ project.url | relative_url }}"><span class="nav-code">{{ forloop.index | prepend: '0' }}</span>{{ project.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+      <p class="nav-heading">EXPLORE</p>
+      <a class="nav-link" href="{{ '/categories/' | relative_url }}">분야별 프로젝트</a>
+      <a class="nav-link" href="{{ '/tags/' | relative_url }}">기술 태그</a>
+      <div class="nav-footer"><b>도재우 · Jae Woo Do</b>Embedded Software Developer<br><a href="mailto:herobine159@naver.com">herobine159@naver.com ↗</a></div>
+    </nav>
+    <div class="workspace">
+      <main class="content" id="main">
+        <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Portfolio</a><span>/</span><span>{{ page.title | default: '프로젝트 모음' | escape }}</span></div>
+        {{ content }}
+        <footer class="page-footer"><span>© 도재우 · Embedded Software</span><span>설계하고, 구현하고, 기록합니다.</span></footer>
+      </main>
+      <aside class="toc" aria-label="이 페이지의 목차"><p>ON THIS PAGE</p><div id="page-toc"></div><p class="toc-note">담당 역할과 구현,<br>문제 해결 과정을 기록합니다.</p></aside>
+    </div>
+  </div>
+  <dialog id="search-dialog" aria-label="프로젝트 문서 검색"><div class="search-head"><input type="search" id="search-input" aria-label="검색어" placeholder="프로젝트, 기술 검색…" autocomplete="off"><button id="search-close" aria-label="검색 닫기">ESC</button></div><div class="search-results" id="search-results" aria-live="polite"></div></dialog>
+  <script type="application/json" id="search-data">[
+  {% for slug in site.data.project_order %}{% assign project = site.posts | where: 'slug', slug | first %}
+    {"title":{{ project.title | jsonify }},"href":{{ project.url | relative_url | jsonify }},"summary":{{ project.description | jsonify }},"text":{{ project.tags | join: ' ' | append: ' ' | append: project.categories.first | jsonify }}}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ]</script>
+  <dialog class="image-dialog" id="image-dialog" aria-label="이미지 확대"><button id="image-close" aria-label="이미지 닫기">닫기 ×</button><img id="image-full" alt=""><p id="image-caption"></p></dialog>
+</body>
+</html>
