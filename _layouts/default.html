@@ -55,6 +55,6 @@
     {"title":{{ project.title | jsonify }},"href":{{ project.url | relative_url | jsonify }},"summary":{{ project.description | jsonify }},"text":{{ project.tags | join: ' ' | append: ' ' | append: project.categories.first | jsonify }}}{% unless forloop.last %},{% endunless %}
   {% endfor %}
   ]</script>
-  <dialog class="image-dialog" id="image-dialog" aria-label="이미지 확대"><button id="image-close" aria-label="이미지 닫기">닫기 ×</button><img id="image-full" alt=""><p id="image-caption"></p></dialog>
+  <dialog class="image-dialog" id="image-dialog" aria-label="이미지 확대"><button id="image-close" aria-label="이미지 닫기">닫기 ×</button><p id="image-caption"></p></dialog>
 </body>
 </html>

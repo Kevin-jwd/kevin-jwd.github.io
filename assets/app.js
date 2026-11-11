@@ -59,13 +59,17 @@ headings.forEach(section => {
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('.toc a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}}},{rootMargin:'-80px 0px -65% 0px'});headings.forEach(h=>observer.observe(h));}
 
 const imageDialog = $('#image-dialog');
+const fullImage = document.createElement('img');
+fullImage.id = 'image-full';
+fullImage.alt = '';
 document.querySelectorAll('.doc-body img').forEach(img => {
   img.tabIndex = 0;
   img.setAttribute('role', 'button');
   img.setAttribute('aria-label', (img.alt || '이미지') + ' 확대');
   const openImage = () => {
-    $('#image-full').src = img.currentSrc || img.src;
-    $('#image-full').alt = img.alt;
+    fullImage.src = img.currentSrc || img.src;
+    fullImage.alt = img.alt;
+    $('#image-caption').before(fullImage);
     $('#image-caption').textContent = img.alt;
     imageDialog.showModal();
   };
