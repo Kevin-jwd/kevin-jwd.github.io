@@ -1,0 +1,18 @@
+<!-- Keep Chirpy's native mode menu; choose dark only on the first visit. -->
+<script>
+  (() => {
+    try {
+      const key = 'portfolio-chirpy-theme-initialized';
+      if (!localStorage.getItem(key)) {
+        if (!localStorage.getItem('theme')) {
+          localStorage.setItem('theme', 'dark');
+          document.documentElement.dataset.bsTheme = 'dark';
+          document.documentElement.toggleAttribute('data-theme-persisted', true);
+        }
+        localStorage.setItem(key, 'true');
+      }
+    } catch {
+      document.documentElement.dataset.bsTheme = 'dark';
+    }
+  })();
+</script>
