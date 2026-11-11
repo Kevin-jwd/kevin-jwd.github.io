@@ -2,7 +2,7 @@
   {
     "slug":"smart-fan","title":"스마트 선풍기 센서·LCD 드라이버","short":"스마트 선풍기 드라이버","category":"Linux Driver","type":"팀 프로젝트","period":"—","people":"—",
     "summary":"Jetson에서 BMP180 온도를 읽고 LCD를 제어하는 Linux 커널 드라이버를 구현했습니다.",
-    "tags":["C","Linux Kernel","I2C","Device Tree","Jetson Orin Nano"],
+    "tags":["C", "Linux", "I2C", "Device Tree"],
     "overview":"온도 센서, LCD, 모터와 입력 장치를 연결한 스마트 선풍기 프로젝트입니다. 이 문서는 그중 직접 담당한 BMP180 온도 센서와 LCD1602 커널 드라이버를 중심으로 설명합니다.",
     "role":"BMP180 온도 측정·보정과 LCD1602 출력 드라이버를 담당했습니다. 사용자 프로그램이 문자 장치 인터페이스로 센서와 LCD에 접근할 수 있도록 구성했습니다.",
     "boundary":"모터·서보·입력 장치 및 사용자 앱 전체는 팀 시스템의 구성 요소이며, 이 문서의 개인 구현 범위와 구분합니다.",
@@ -16,7 +16,7 @@
   {
     "slug":"vehicle-hmi","title":"운전자 인증 기반 차량 HMI","short":"차량 HMI","category":"Qt / HMI","type":"팀 프로젝트","period":"—","people":"—",
     "summary":"얼굴 인증, 차량 제어, 센서 모니터링과 이력 관리를 Qt HMI로 연결했습니다.",
-    "tags":["C++17","Qt Widgets","QSerialPort","OpenCV","SQLite"],
+    "tags":["C++", "Qt", "OpenCV", "SQLite"],
     "overview":"운전자 얼굴을 확인한 뒤 차량 조작을 활성화하고, 온습도·거리·주행 상태를 보여주는 PC 기반 차량 HMI 시스템입니다. STM32와 UART로 명령과 상태 데이터를 주고받습니다.",
     "role":"Qt GUI, 카메라 영상 처리, 얼굴 인증, UART 송수신 및 SQLite 이력 관리를 포함한 PC 측 프로그램을 담당했습니다.",
     "boundary":"STM32 펌웨어는 팀원이 구현했습니다. PC의 명령 전송 구현과 MCU의 실제 구동 검증은 구분합니다.",
@@ -30,7 +30,7 @@
   {
     "slug":"vision-tracker","title":"인물 추적 팬틸트 카메라","short":"인물 추적 팬틸트","category":"Embedded Vision","type":"팀 프로젝트","period":"—","people":"—",
     "summary":"인물 검출·추적·재식별 결과를 팬틸트 제어로 연결한 Jetson 시스템입니다.",
-    "tags":["Python","YOLO11","BoT-SORT","OSNet","TensorRT","UART"],
+    "tags":["Python", "OpenCV", "UART", "TensorRT"],
     "overview":"웹에서 선택한 인물을 카메라가 자동으로 추적하고, 게임패드로 차체를 수동 조작하는 시스템입니다. 인물 추적 좌표를 팬·틸트 명령으로 변환하여 MCU에 전달합니다.",
     "role":"웹 실행 환경, AI 인물 추적·재식별, 팬틸트 제어 로직과 MCU 명령 전송을 담당했습니다. 카메라와 차체 제작에도 참여했습니다.",
     "boundary":"MCU 펌웨어는 팀원 담당입니다. 자동 제어 대상은 카메라 팬틸트이며 차체는 수동으로 이동합니다.",
@@ -44,7 +44,7 @@
   {
     "slug":"i2c-rtl","title":"I2C 센서 수집·표시 RTL 설계","short":"I2C 센서 RTL","category":"FPGA / RTL","type":"팀 프로젝트","period":"—","people":"—",
     "summary":"두 FPGA 사이의 I2C 통신과 센서 수집·FND·OLED 표시를 RTL로 구현했습니다.",
-    "tags":["Verilog","Vivado","Basys 3 × 2","I2C","DHT11","HC-SR04","SSD1306"],
+    "tags":["Verilog", "I2C"],
     "overview":"Slave FPGA에서 온습도·거리 데이터를 수집하고, Master FPGA가 I2C로 읽어 FND와 OLED에 표시하는 센서 모니터링 시스템입니다.",
     "role":"I2C Master·Slave와 센서 수집·FND·OLED 표시 등 RTL 전반을 직접 구현했습니다.",
     "boundary":"개별 모듈의 소스·테스트벤치와 팀 발표자료를 함께 연결해 설계 내용을 설명합니다.",
@@ -58,7 +58,7 @@
   {
     "slug":"rc-car","title":"ATmega128A 자율주행 RC Car","short":"자율주행 RC Car","category":"MCU / Firmware","type":"개인 구현 · 공동 발표","period":"—","people":"1명 (개별 차량)",
     "summary":"초음파 거리 측정과 장애물 대응 주행, Bluetooth 수동 제어를 연결했습니다.",
-    "tags":["C","ATmega128A","Timer","Interrupt","UART","PWM"],
+    "tags":["C", "UART", "PWM"],
     "overview":"초음파 센서로 장애물에 대응하는 자율주행과 Bluetooth 명령 기반 수동 주행을 지원하는 RC Car입니다. 각자 차량을 구현하고 발표를 함께 진행했습니다.",
     "role":"개별 차량의 센서 수집, 거리 데이터 처리, 주행 제어 및 FND 상태 표시 전반을 구현했습니다.",
     "boundary":"공개 AVR 실습 저장소의 코드와 최종 로컬 자율주행 소스는 버전이 다릅니다. 아래 저장소 링크는 관련 실습 코드로 구분합니다.",
@@ -72,7 +72,7 @@
   {
     "slug":"lcd-rtc","title":"ATmega128A LCD·RTC 드라이버","short":"LCD·RTC 드라이버","category":"MCU / Interface","type":"팀 프로젝트","period":"—","people":"—",
     "summary":"GPIO 4비트 LCD 제어와 I2C RTC 시간 읽기·표시를 구현했습니다.",
-    "tags":["C","ATmega128A","GPIO","I2C","Microchip Studio"],
+    "tags":["C", "GPIO", "I2C"],
     "overview":"RTC의 시간을 ATmega128A에서 읽어 LCD에 표시하고 팀원의 계산기 기능과 통합한 프로젝트입니다.",
     "role":"GPIO 4비트 LCD 드라이버와 I2C RTC 시간 읽기·표시 기능을 담당했습니다.",
     "boundary":"계산기 기능은 팀원이 구현했습니다. RTC의 정확한 부품명과 핀 번호는 실제 부품·배선과 대조한 뒤 추가합니다.",
@@ -86,7 +86,7 @@
   {
     "slug":"imu-pt","title":"모션 트래킹 기반 가정용 PT 시스템","short":"IMU 모션 트래킹 PT","category":"Sensor / Motion Tracking","type":"졸업작품","period":"—","people":"—",
     "summary":"무릎 위아래에 부착한 IMU 4개의 움직임을 수집해 Unity 모델과 연동했습니다.",
-    "tags":["ESP32","LSM9DS1 × 4","I2C MUX","UDP / TCP","Unity"],
+    "tags":["I2C", "TCP/IP", "Unity"],
     "overview":"각 무릎의 위아래에 IMU를 부착해 움직임을 수집하고 가정에서 운동 자세를 확인할 수 있도록 구성한 Personal Training 시스템입니다. 2024 한국통신학회 학부 우수논문 장려상을 수상했습니다.",
     "role":"IMU 센서 데이터 수집과 보정·자세 추정, ESP32에서 서버·Unity로 이어지는 데이터 전달에 참여했습니다.",
     "boundary":"원본 코드의 형상관리가 되어 있지 않아 자세 계산과 센서 융합의 세부 알고리즘은 추가 확인이 필요합니다. 이 문서는 확인된 시스템 구성 중심으로 정리합니다.",

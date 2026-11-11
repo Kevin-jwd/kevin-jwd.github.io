@@ -3,7 +3,7 @@ title: "인물 추적 팬틸트 카메라"
 description: "인물 검출·추적·재식별 결과를 팬틸트 제어로 연결한 Jetson 시스템입니다."
 date: "2026-11-11 00:00:00 +0900"
 categories: ["Embedded Vision"]
-tags: ["Python", "YOLO11", "BoT-SORT", "OSNet", "TensorRT", "UART"]
+tags: ["Python", "OpenCV", "UART", "TensorRT"]
 permalink: "/projects/vision-tracker.html"
 toc: true
 comments: false
