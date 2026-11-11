@@ -2,7 +2,7 @@
 title: "운전자 인증 기반 차량 HMI"
 description: "얼굴 인증, 차량 제어, 센서 모니터링과 이력 관리를 Qt HMI로 연결했습니다."
 date: "2026-11-11 00:00:00 +0900"
-categories: ["Qt / HMI"]
+categories: ["GUI 응용 소프트웨어"]
 tags: ["C++", "Qt", "OpenCV", "SQLite"]
 permalink: "/projects/vehicle-hmi.html"
 toc: true
