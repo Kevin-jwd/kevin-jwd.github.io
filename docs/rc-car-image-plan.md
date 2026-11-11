@@ -7,7 +7,7 @@ Chirpy에 포함된 Bootstrap의 `row`·`col-6` 구성을 사용하며 테마 CS
 
 | 원본 파일 | 사이트 파일 | 수신 문자 | 위치 |
 | --- | --- | --- | --- |
-| RC Car (10).png | `uart-forward.png` | `f` / 0x66 | 좌상단 |
+| RC Car (15).png — START·STOP 표기 추가 | `uart-forward.png` | `f` / 0x66 | 좌상단 |
 | RC Car (12).png | `uart-stop.png` | `s` / 0x73 | 우상단 |
 | RC Car (13).png | `uart-left.png` | `l` / 0x6C | 좌하단 |
 | RC Car (11).png | `uart-right.png` | `r` / 0x72 | 우하단 |
