@@ -1,11 +1,9 @@
 const $ = s => document.querySelector(s);
 const themeButton = $('#theme-toggle');
-let theme;
-try { theme = localStorage.getItem('portfolio-theme'); } catch {}
-if (theme) document.documentElement.dataset.theme = theme;
-function themeLabel(){ themeButton.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾'; themeButton.setAttribute('aria-label',document.documentElement.dataset.theme === 'dark' ? '밝은 테마로 전환' : '어두운 테마로 전환'); }
+function themeLabel(){ const dark = document.documentElement.dataset.theme === 'dark'; const label = dark ? '라이트 테마로 전환' : '다크 테마로 전환'; themeButton.textContent = dark ? '☀' : '☾'; themeButton.setAttribute('aria-label',label); themeButton.title = label; themeButton.setAttribute('aria-pressed', String(!dark)); document.querySelector('meta[name="theme-color"]').content = dark ? '#1b1b1e' : '#ffffff'; }
 themeLabel();
 themeButton.addEventListener('click', () => { const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = next; try{localStorage.setItem('portfolio-theme',next)}catch{} themeLabel(); });
+window.addEventListener('storage', e => { if(e.key === 'portfolio-theme' || e.key === null){document.documentElement.dataset.theme = e.newValue === 'light' ? 'light' : 'dark';themeLabel();} });
 const menu = $('#menu-toggle');
 function closeNav(){document.body.classList.remove('nav-open');menu.setAttribute('aria-expanded','false');}
 menu.addEventListener('click',()=>{const open = document.body.classList.toggle('nav-open');menu.setAttribute('aria-expanded',String(open));});
